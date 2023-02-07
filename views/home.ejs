@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <h1>TODO App</h1>
+       
+        <form action="/tasks/create" method="POST" class="form">
+            <div class="first-div">
+                <label>Description</label>
+                <input class="in-description" type="text" placeholder="what do you want to do" name="description">
+            </div>
+            
+
+            <div class="sec-div">
+                <div class="third-div">
+                    <label>Category</label>
+
+                    <select class="in-select" name="category" >
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                
+                <div class="fourth-div">
+                    <label>Due Date</label>
+                
+                    <input class="in-date" type="date" name="due_date" placeholder="dd/mm/yyyy">
+                </div>
+                
+            </div>
+            
+            <button type="submit">Add Task</button>
+            
+        </form>
+        <div class=".delete-div">
+            <button class="delete-btn" type="submit" onclick="deleteItems()" action="#">Delete</button>
+        </div>
+
+        <div class="list-items-div">
+            <ul class="list-start">
+                <% for (let task of tasks) { %> 
+                    <li class="list-item">
+                        
+                        <div>
+                            <input class="list-checkbox" type="checkbox" name="check" value=<%=task._id%> > 
+                        </div>
+                       
+                        <div class="description"> 
+                            <p style="opacity:.8"><%= task.description %></p>
+                            <p style="color:gray"><%=   moment(task.due_date).format("YYYY-MM-DD")%></p>
+                        </div>
+                        <div class="category">
+                            <div class="category-content"><%= task.category %></div>
+                        </div>
+                    </li>
+                 <% } %>
+            </ul>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+</html>
+
+
+    

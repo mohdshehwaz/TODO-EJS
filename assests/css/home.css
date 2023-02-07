@@ -1,0 +1,146 @@
+body{
+    font-family: sans-serif;
+
+    display: flex;
+    justify-content: center;
+}
+.main{
+    
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main h1{
+    color: gray;
+}
+.form{
+    width: 100%;
+    height:fit-content;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first-div{
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.first-div label{
+    margin: 10px;
+    color: gray;
+}
+.first-div input {
+    height: 30px;
+    border: none;
+    padding: 10px;
+}
+.sec-div{
+    display: flex;
+    width: 100%;
+}
+.third-div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.third-div label{
+    margin: 10px;
+    color: gray;
+}
+.third-div select {
+    height: auto;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.fourth-div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    box-sizing: border-box;
+}
+.fourth-div label{
+    margin: 10px;
+    color: gray;
+}
+.in-date{
+    height: auto;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid gray ;
+}
+form button{
+    background-color: rgb(68, 68, 68);
+    width: 120px;
+    height: 30px;
+    /* position: relative;
+    left: 38.7%; */
+    margin: 20px;
+}
+.delete-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete-btn{
+    
+    width: 120px;
+    height: 30px;
+    background-color: red;
+}
+.list-items-div{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    
+    
+}
+.list-start{
+    margin-left: -20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    box-sizing: border-box;
+}
+.list-checkbox{
+    margin-right: 10px;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.category-content{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+@media only screen and (max-width: 900px) {
+    .main {
+      width: 100vh;
+    }
+  }
